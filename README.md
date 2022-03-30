@@ -1,2 +1,2 @@
-# laomeinote.com
-build a blog with python
+
+> 很早就想写一个自己的博客了，立个Flag，今年开搞吧。
