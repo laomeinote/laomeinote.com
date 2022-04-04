@@ -146,6 +146,26 @@ div.header.item a {
     color: #39c;
 }
 
+/*设置footer部分属性*/
+footer {
+    padding-top: 2rem;
+}
+
+footer .footer.vertical.segment {
+    background-color: #455A64;
+    border-radius: 0;
+}
+
+footer .ui.images img {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+}
+
+.ui.center.aligned button {
+    margin-bottom: 1rem;
+}
+
 /*设置终端显示*/
 @media (max-width: 768px) {
     #related__wrapper {
