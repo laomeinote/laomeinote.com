@@ -145,3 +145,55 @@ div.header.item a {
 .list .item a:hover {
     color: #39c;
 }
+
+/*设置终端显示*/
+@media (max-width: 768px) {
+    #related__wrapper {
+        max-width: 100%;
+    }
+    #main .articles.eleven.wide.column,
+    aside#aside__wrapper.five.wide.column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .secondary.inverted.menu .item {
+        display: none;
+    }
+    .article-thumb {
+        height: 200px;
+        height: 50vw;
+    }
+
+    .glide__wrapper,
+    .slider__slide {
+        height: 200px;
+    }
+
+
+    .article {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .article-content > .description {
+        display: none;
+    }
+    .ui.ribbon.label {
+        display: none;
+    }
+    .category.date {
+        display: none;
+    }
+    .header h2 {
+        font-size: 1.5rem;
+    }
+    .secondary.menu .toc.item {
+        display: block;
+    }
+    .ui.vertical.sidebar {
+        width: 120px;
+    }
+    .related-thumb {
+        height: 200px;
+        height: 40vw;
+    }
+}
