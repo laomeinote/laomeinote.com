@@ -14,20 +14,28 @@
     <!--左侧侧边栏-->
     <div id="laomei" class="ui vertical inverted sidebar menu left">
         <a class="item" href="/"><i class="home icon"></i>首页</a>
-        <a class="item" href="/category/news"><i class="world icon"></i>资讯</a>
-        <a class="item" href="/category/tutorials"><i class="fork icon"></i>教程</a>
-        <a class="item" href="/category/katas"><i class="write icon"></i>练习</a>
+        <a class="item" href="/category/news"><i class="google icon"></i>K8s</a>
+        <a class="item" href="/category/news"><i class="docker icon"></i>Docker</a>
+        <a class="item" href="/category/news"><i class="cloud icon"></i>Istio</a>
+        <a class="item" href="/category/tutorials"><i class="python icon"></i>Python</a>
+        <a class="item" href="/category/katas"><i class="code icon"></i>Go</a>
+        <a class="item" href="/category/katas"><i class="java icon"></i>Java</a>
 
-        <a class="item" href="/category/download"><i class="cloud download icon"></i>资源</a>
-        <a class="item" href="/category/other-thinkings"><i class="leaf icon"></i>其他</a>
+        <a class="item" href="/category/tutorials"><i class="sitemap icon"></i>快速建站</a>
+        <a class="item" href="/category/katas"><i class="server icon"></i>网站优化</a>
+        <a class="item" href="/category/katas"><i class="dollar sign icon"></i>网站运营</a>
+        <a class="item" href="/category/downloads/" target="_blank"><i class="magic icon"></i>雕虫小技</a>
+        <a class="item" href="/category/resource/" target="_blank"><i class="star icon"></i>精选资源</a>
+
         <a class="item" href="/account/register"><i class="user icon"></i>注册</a>
         <a class="item" href="/account/login"><i class="sign in icon"></i>登录</a>
+
     </div>
 
     <div class="pusher">
         <!-- 第一部分：menu菜单栏-->
         <nav id="navbar" class="ui stripe">
-            <div class="ui container inverted secondary menu">
+            <div class="ui  container inverted secondary menu">
                 <div class="header item">
                     <a href="http://laomeinote.com" target="_blank" title="laomeinote.com"><img class="ui logo" src="../static/images/logo.jpg" alt="老梅笔记的logo"></a>
                 </div>
@@ -35,12 +43,44 @@
                     <i class="sidebar icon"></i>
                 </a>
                 <a class="item" href="/" target="_blank">首页</a>
-                <a class="item" href="/category/news/" target="_blank">资讯</a>
-                <a class="item" href="/category/tutorials/" target="_blank">教程</a>
-                <a class="item" href="/category/katas/" target="_blank">练习</a>
 
-                <a class="item" href="/category/downloads/" target="_blank">资源</a>
-                <a class="item" href="/category/other-thinkings/" target="_blank">其他</a>
+                <div class="menu">
+                    <div class="ui dropdown item">
+                        云原生 <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item">Kubernetes</a>
+                            <a class="item">Docker</a>
+                            <a class="item">Istio Mesh</a>
+                            <a class="item">CI/CD</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="ui dropdown item">
+                        编程 <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item">Python</a>
+                            <a class="item">Go</a>
+                            <a class="item">Java</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="ui dropdown item">
+                        网站运营 <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item">建站</a>
+                            <a class="item">优化</a>
+                            <a class="item">运营</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="item" href="/category/downloads/" target="_blank">雕虫小技</a>
+                <a class="item" href="/category/resource/" target="_blank">精选资源</a>
+
                 <div class="right menu">
                     <div class="item">
                         <div class="ui search">
@@ -52,23 +92,84 @@
                     </div>
                 </div>
             </div>
+
+
+
         </nav>
 
-    <!--在菜单栏下面加入glidejs幻灯图-->
-    <div id="Glide" class="glide ui container" >
-        <!--轮播图主体-->
-        <div class="glide__wrapper">
-            <div class="glide__track" data-glide-el="track">
-                <div class="glide__slides">
-                    <!--五个轮播图的div-->
-                    <div class="glide__slide slider__slide">
-                        <div class="image">
-                            <div class="glidediv" style="background-image: url('../static/images/bg1.jpg')" >
-                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
-                                <div class="ui dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+        <!--在菜单栏下面加入glidejs幻灯图-->
+        <div id="Glide" class="glide ui container" >
+            <!--轮播图主体-->
+            <div class="glide__wrapper">
+                <div class="glide__track" data-glide-el="track">
+                    <div class="glide__slides">
+                        <!--五个轮播图的div-->
+                        <div class="glide__slide slider__slide">
+                            <div class="image">
+                                <div class="glidediv" style="background-image: url('../static/images/bg1.jpg')" >
+                                    <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glide__slide slider__slide">
+                            <div class="image">
+                                <div class="glidediv" style="background-image: url('../static/images/bg2.jpg')" >
+                                    <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide slider__slide">
+                            <div class="image">
+                                <div class="glidediv" style="background-image: url('../static/images/bg3.jpg')" >
+                                    <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide slider__slide">
+                            <div class="image">
+                                <div class="glidediv" style="background-image: url('../static/images/bg4.jpg')" >
+                                    <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glide__slide slider__slide">
+                            <div class="image">
+                                <div class="glidediv" style="background-image: url('../static/images/bg5.png')" >
+                                    <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -76,83 +177,25 @@
                         </div>
                     </div>
 
-                    <div class="glide__slide slider__slide">
-                        <div class="image">
-                            <div class="glidediv" style="background-image: url('../static/images/bg2.jpg')" >
-                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
-                                <div class="ui dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="glide__slide slider__slide">
-                        <div class="image">
-                            <div class="glidediv" style="background-image: url('../static/images/bg3.jpg')" >
-                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
-                                <div class="ui dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="glide__slide slider__slide">
-                        <div class="image">
-                            <div class="glidediv" style="background-image: url('../static/images/bg4.jpg')" >
-                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
-                                <div class="ui dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="glide__slide slider__slide">
-                        <div class="image">
-                            <div class="glidediv" style="background-image: url('../static/images/bg5.png')" >
-                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
-                                <div class="ui dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
-        </div>
 
-        <!--左右导航箭头,arrow-->
-        <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="left arrow icon"></i></button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="right arrow icon"></i></button>
-        </div>
+            <!--左右导航箭头,arrow-->
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="left arrow icon"></i></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="right arrow icon"></i></button>
+            </div>
 
-        <!--轮播小原点 bullet-->
-        <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">
-            <button class="slider__bullet glide__bullet glide__bullet--active" data-glide-dir="=0"></button>
-            <button class="slider__bullet glide__bullet" data-glide-dir="=1"></button>
-            <button class="slider__bullet glide__bullet" data-glide-dir="=2"></button>
-            <button class="slider__bullet glide__bullet" data-glide-dir="=3"></button>
-            <button class="slider__bullet glide__bullet" data-glide-dir="=4"></button>
-        </div>
+            <!--轮播小原点 bullet-->
+            <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">
+                <button class="slider__bullet glide__bullet glide__bullet--active" data-glide-dir="=0"></button>
+                <button class="slider__bullet glide__bullet" data-glide-dir="=1"></button>
+                <button class="slider__bullet glide__bullet" data-glide-dir="=2"></button>
+                <button class="slider__bullet glide__bullet" data-glide-dir="=3"></button>
+                <button class="slider__bullet glide__bullet" data-glide-dir="=4"></button>
+            </div>
 
-    </div>
+        </div>
 
         <!--第二部分： 页面主体-->
         <div id="main">
@@ -203,7 +246,7 @@
                                     <div class="ui feed">
                                         <div class="event">
                                             <div class="label">
-                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="laomeinote" class="avatar">
+                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="老梅" class="avatar">
                                             </div>
                                             <div class="content">
                                                 <span class="date">2022-2-26</span>
@@ -252,7 +295,7 @@
                                     <div class="ui feed">
                                         <div class="event">
                                             <div class="label">
-                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="laomeinote" class="avatar">
+                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="老梅" class="avatar">
                                             </div>
                                             <div class="content">
                                                 <span class="date">2022-2-26</span>
@@ -301,7 +344,7 @@
                                     <div class="ui feed">
                                         <div class="event">
                                             <div class="label">
-                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="laomeinote" class="avatar">
+                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="老梅" class="avatar">
                                             </div>
                                             <div class="content">
                                                 <span class="date">2022-2-26</span>
@@ -350,7 +393,7 @@
                                     <div class="ui feed">
                                         <div class="event">
                                             <div class="label">
-                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="laomeinote" class="avatar">
+                                                <img src="../static/images/logo.jpg" alt="avatar of laomeinote" data-title="老梅" class="avatar">
                                             </div>
                                             <div class="content">
                                                 <span class="date">2022-2-26</span>
@@ -373,6 +416,25 @@
                         </div>
 
                     </div>
+
+                    <!--在文章栅格里加上pagination-->
+                    <div id="pagination-f" >
+                        <div id="pagination-s" class="ui borderless pagination menu">
+                            <a class="item">
+                                <i class="left arrow icon"></i>  </a>
+
+                            <a class="item">1</a>
+                            <a class="item">2</a>
+                            <a class="item">3</a>
+                            <a class="item">4</a>
+                            <a class="item">5</a>
+                            <a class="item">6</a>
+                            <a class="item">
+                                <i class="right arrow icon"></i>  </a>
+
+                        </div>
+                    </div>
+
 
                 </div>
 
@@ -518,7 +580,7 @@
                 <div class="ui container">
                     <div class="ui stackable inverted divided equal height stackable grid">
                         <div class="three wide column">
-                            <h4 class="ui inverted header">关于老梅笔记</h4>
+                            <h4 class="ui inverted header">关于我</h4>
                             <div class="ui inverted link list">
                                 <a href="http://127.0.0.1:5000/sitemap.xml/" class="item">站点地图</a>
                                 <a href="/" class="item">联系我们</a>
@@ -526,12 +588,9 @@
                             </div>
                         </div>
                         <div class="three wide column">
-                            <h4 class="ui inverted header">关注老梅笔记</h4>
+                            <h4 class="ui inverted header">社交</h4>
                             <a class="ui circular weibo red icon button" href="http://weibo.com/" target="_blank">
                                 <i class="weibo icon"></i>
-                            </a>
-                            <a class="ui circular twitter icon button" href="https://twitter.com/" target="_blank">
-                                <i class="twitter icon"></i>
                             </a>
                             <a class="ui circular icon button" href="http://github.com/" target="_blank">
                                 <i class="github alternate blue icon"></i>
@@ -542,20 +601,30 @@
 
                         </div>
                         <div class="three wide column">
-                            <h4 class="ui inverted header">导航</h4>
+                            <h4 class="ui inverted header">技术笔记</h4>
                             <div class="ui inverted link list">
-                                <a target="_blank" href="/category/news/" class="item">资讯</a>
-                                <a target="_blank" href="/category/tutorials/" class="item">教程</a>
-                                <a target="_blank" href="/category/katas/" class="item">练习</a>
-                                <a target="_blank" href="/category/downloads/" class="item">资源</a>
-                                <a target="_blank" href="/category/other-thinkings/" class="item">其他</a>
+                                <a target="_blank" href="/category/news/" class="item">Kubernetes</a>
+                                <a target="_blank" href="/category/tutorials/" class="item">Docker</a>
+                                <a target="_blank" href="/category/katas/" class="item">Istio</a>
+                                <a target="_blank" href="/category/downloads/" class="item">Python</a>
+                                <a target="_blank" href="/category/other-thinkings/" class="item">Go</a>
                             </div>
                         </div>
-                        <div class="seven wide column">
+                        <div class="three wide column">
+                            <h4 class="ui inverted header">运营笔记</h4>
+                            <div class="ui inverted link list">
+                                <a target="_blank" href="/category/news/" class="item">快速建站</a>
+                                <a target="_blank" href="/category/tutorials/" class="item">网站优化</a>
+                                <a target="_blank" href="/category/katas/" class="item">网站运营</a>
+                                <a target="_blank" href="/category/downloads/" class="item">雕虫小技</a>
+                                <a target="_blank" href="/category/other-thinkings/" class="item">精选资源</a>
+                            </div>
+                        </div>
+                        <div class="four wide column">
                             <h4 class="ui inverted header">Powered by</h4>
                             <div class="ui images">
                                 <a target="_blank" href="http://www.python.org"><img src="../static/images/python-favico.ico" alt="python"></a>
-                                <a target="_blank" href="http://flask.pocoo.org/"><img src="../static/images/flask.png" alt="flask"></a>
+                                <a target="_blank" href="http://flask.pocoo.org/"><img src="../static/images/django.png" alt="flask"></a>
                             </div>
 
                         </div>
@@ -623,6 +692,12 @@
             .sticky()
         ;
 
+        //菜单栏的dropdown效果
+        $('.ui.dropdown')
+            .dropdown({
+                on: 'hover'
+            })
+        ;
     </script>
 
 </body>

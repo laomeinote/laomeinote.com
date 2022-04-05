@@ -23,7 +23,14 @@ body {
     font-weight: 600;
 }
 
-/*设置菜单栏的image太小*/
+#navbar .ui.dropdown.item {
+    font-size: 16px;
+    font-weight: 600;
+    /*保持与其他菜单（沿用semantic）一致的颜色*/
+    color: rgba(255,255,255,.7);
+}
+
+/*设置菜单栏的image大小*/
 img.ui.logo {
     width: 32px;
 }
@@ -127,6 +134,16 @@ div.header.item a {
     color: #39c;
 }
 
+/*设置pagination部分属性*/
+/*弹性元素想要居中，可以将父元素设置flex，子元素设置auto*/
+#pagination-f {
+    display: flex;
+}
+
+#pagination-s {
+    margin: auto;
+}
+
 /*设置footer部分属性*/
 footer {
     padding-top: 2rem;
@@ -138,7 +155,7 @@ footer .footer.vertical.segment {
 }
 
 footer .ui.images img {
-    width: 48px;
+    width: auto;
     height: 48px;
     margin-right: 1rem;
 }
@@ -177,7 +194,6 @@ footer .ui.images img {
     -webkit-transition:all 200ms ease-in-out;
     transition:all 200ms ease-in-out
 }
-
 
 /*设置终端显示*/
 @media (max-width: 667px) {
