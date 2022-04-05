@@ -54,6 +54,105 @@
             </div>
         </nav>
 
+    <!--在菜单栏下面加入glidejs幻灯图-->
+    <div id="Glide" class="glide ui container" >
+        <!--轮播图主体-->
+        <div class="glide__wrapper">
+            <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides">
+                    <!--五个轮播图的div-->
+                    <div class="glide__slide slider__slide">
+                        <div class="image">
+                            <div class="glidediv" style="background-image: url('../static/images/bg1.jpg')" >
+                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glide__slide slider__slide">
+                        <div class="image">
+                            <div class="glidediv" style="background-image: url('../static/images/bg2.jpg')" >
+                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__slide slider__slide">
+                        <div class="image">
+                            <div class="glidediv" style="background-image: url('../static/images/bg3.jpg')" >
+                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__slide slider__slide">
+                        <div class="image">
+                            <div class="glidediv" style="background-image: url('../static/images/bg4.jpg')" >
+                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__slide slider__slide">
+                        <div class="image">
+                            <div class="glidediv" style="background-image: url('../static/images/bg5.png')" >
+                                <!--在image div中加入dimmer遮蔽层，加入标签按钮-->
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <a href="#"><div class="ui basic inverted big teal button">Python进阶、求职必看的前辈经验分享</div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--左右导航箭头,arrow-->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="left arrow icon"></i></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="right arrow icon"></i></button>
+        </div>
+
+        <!--轮播小原点 bullet-->
+        <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]">
+            <button class="slider__bullet glide__bullet glide__bullet--active" data-glide-dir="=0"></button>
+            <button class="slider__bullet glide__bullet" data-glide-dir="=1"></button>
+            <button class="slider__bullet glide__bullet" data-glide-dir="=2"></button>
+            <button class="slider__bullet glide__bullet" data-glide-dir="=3"></button>
+            <button class="slider__bullet glide__bullet" data-glide-dir="=4"></button>
+        </div>
+
+    </div>
 
         <!--第二部分： 页面主体-->
         <div id="main">
@@ -474,6 +573,28 @@
     <script src="../static/semantic/dist/semantic.min.js"></script>
     <script src="../static/node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
+    <!--glidejs轮播图效果-->
+    <script>
+        new Glide('#Glide',{
+            type: 'carousel',
+            gap: 20,
+            focusAt: 'center',
+            perView: 1,
+            autoplay: 2000,
+            animationDuration: 300,
+            arrows: {
+                prev: '.glide__arrow--left',
+                next: '.glide__arrow--right'
+            },
+            //设置轮播图左右侧距离
+            peek: {
+                before: 240,
+                after: 240,
+            }
+        }).mount();
+
+    </script>
+
     <script>
         <!--设置鼠标移动时的dimmer遮蔽效果-->
         $('.article-thumb').dimmer({
@@ -481,8 +602,15 @@
             opacity: 0.7,
         });
 
+        //设置轮播图的dimmer遮蔽效果
+        $('.glidediv').dimmer({
+            on: 'hover',
+            opacity: 0.7,
+        });
+
         $('.avatar').popup();
 
+        //右侧侧边栏的标签效果生效
         $('#tab-nav .item').tab();
 
         //左侧侧边栏
