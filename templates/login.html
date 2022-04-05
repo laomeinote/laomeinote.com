@@ -217,7 +217,10 @@
 
 
     <script>
-
+        //左侧侧边栏
+        $('.ui.sidebar')
+            .sidebar('attach events', '.toc.item')
+        ;
         //菜单栏的dropdown效果
         $('.ui.dropdown')
             .dropdown({
