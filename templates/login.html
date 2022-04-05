@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老梅笔记</title>
+    <link rel="stylesheet" href="../static/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="../static/node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="icon" href="../static/images/logo.jpg">
+
+    <title>注册会员| 老梅笔记 | laomeinote</title>
+    <meta name="keywords" content="老梅笔记,云原生, 网站运营">
+    <meta name="description" content="login">
+    <meta name="author" content="lm@laomeinote.com">
+
+</head>
+<body>
+
+    <!--左侧侧边栏-->
+    <div id="laomei" class="ui vertical inverted sidebar menu left">
+        <a class="item" href="/"><i class="home icon"></i>首页</a>
+        <a class="item" href="/category/news"><i class="google icon"></i>K8s</a>
+        <a class="item" href="/category/news"><i class="docker icon"></i>Docker</a>
+        <a class="item" href="/category/news"><i class="cloud icon"></i>Istio</a>
+        <a class="item" href="/category/tutorials"><i class="python icon"></i>Python</a>
+        <a class="item" href="/category/katas"><i class="code icon"></i>Go</a>
+        <a class="item" href="/category/katas"><i class="java icon"></i>Java</a>
+
+        <a class="item" href="/category/tutorials"><i class="sitemap icon"></i>快速建站</a>
+        <a class="item" href="/category/katas"><i class="server icon"></i>网站优化</a>
+        <a class="item" href="/category/katas"><i class="dollar sign icon"></i>网站运营</a>
+        <a class="item" href="/category/downloads/" target="_blank"><i class="magic icon"></i>雕虫小技</a>
+        <a class="item" href="/category/resource/" target="_blank"><i class="star icon"></i>精选资源</a>
+
+        <a class="item" href="/account/register"><i class="user icon"></i>注册</a>
+        <a class="item" href="/account/login"><i class="sign in icon"></i>登录</a>
+
+    </div>
+
+    <div class="pusher">
+        <!-- 第一部分：menu菜单栏-->
+        <nav id="navbar" class="ui stripe">
+            <div class="ui  container inverted secondary menu">
+                <div class="header item">
+                    <a href="http://laomeinote.com" target="_blank" title="laomeinote.com"><img class="ui logo" src="../static/images/logo.jpg" alt="老梅笔记的logo"></a>
+                </div>
+                <a id="meixuhong" class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <a class="item" href="/" target="_blank">首页</a>
+
+                <div class="menu">
+                    <div class="ui dropdown item">
+                        云原生 <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item">Kubernetes</a>
+                            <a class="item">Docker</a>
+                            <a class="item">Istio Mesh</a>
+                            <a class="item">CI/CD</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="ui dropdown item">
+                        编程 <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item">Python</a>
+                            <a class="item">Go</a>
+                            <a class="item">Java</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="ui dropdown item">
+                        网站运营 <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item">建站</a>
+                            <a class="item">优化</a>
+                            <a class="item">运营</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="item" href="/category/downloads/" target="_blank">雕虫小技</a>
+                <a class="item" href="/category/resource/" target="_blank">精选资源</a>
+
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui search">
+                            <div class="ui left icon input">
+                                <input class="prompt" type="text" placeholder="输入中文搜索词后请空格" name="keywords" id="keywords" autocomplete="off">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </nav>
+
+        <!--第二部分： 页面主体-->
+        <div class="ui container middle aligned center aligned grid" style='width:380px !important; min-height:480px;'>
+            <div class="column">
+
+                <form class="ui form"method="POST" enctype="multipart/form-data" role="form">
+                    <input id="csrf_token" type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input id="email" required type="text" name="email" placeholder="E-mail address">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                            </div>
+                        </div>
+
+                        <div class="field" style="text-align:left;">
+                            <div class="ui checkbox">
+                                <input id='remember_me' type="checkbox" name="remember_me">
+                                <label for="remember_me">记住我</label>
+                            </div>
+                        </div>
+
+
+                        <input class="ui fluid large teal submit button" id="submit" name="submit" type="submit" value="登陆">
+                    </div>
+
+
+                </form>
+
+                <div class="ui message">
+                    还不是会员？<a href="/account/register/">请先注册</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--第三部分：footer-->
+        <footer>
+
+            <div class="ui inverted vertical footer segment">
+                <div class="ui container">
+                    <div class="ui stackable inverted divided equal height stackable grid">
+                        <div class="three wide column">
+                            <h4 class="ui inverted header">关于我</h4>
+                            <div class="ui inverted link list">
+                                <a href="http://127.0.0.1:5000/sitemap.xml/" class="item">站点地图</a>
+                                <a href="/" class="item">联系我们</a>
+                                <a href="http://www.miitbeian.gov.cn/">粤ICP备xxxxx</a>
+                            </div>
+                        </div>
+                        <div class="three wide column">
+                            <h4 class="ui inverted header">社交</h4>
+                            <a class="ui circular weibo red icon button" href="http://weibo.com/" target="_blank">
+                                <i class="weibo icon"></i>
+                            </a>
+                            <a class="ui circular icon button" href="http://github.com/" target="_blank">
+                                <i class="github alternate blue icon"></i>
+                            </a>
+                            <a class="ui circular wechat icon button" href="/" target="_blank">
+                                <i class="wechat green icon"></i>
+                            </a>
+
+                        </div>
+                        <div class="three wide column">
+                            <h4 class="ui inverted header">技术笔记</h4>
+                            <div class="ui inverted link list">
+                                <a target="_blank" href="/category/news/" class="item">Kubernetes</a>
+                                <a target="_blank" href="/category/tutorials/" class="item">Docker</a>
+                                <a target="_blank" href="/category/katas/" class="item">Istio</a>
+                                <a target="_blank" href="/category/downloads/" class="item">Python</a>
+                                <a target="_blank" href="/category/other-thinkings/" class="item">Go</a>
+                            </div>
+                        </div>
+                        <div class="three wide column">
+                            <h4 class="ui inverted header">运营笔记</h4>
+                            <div class="ui inverted link list">
+                                <a target="_blank" href="/category/news/" class="item">快速建站</a>
+                                <a target="_blank" href="/category/tutorials/" class="item">网站优化</a>
+                                <a target="_blank" href="/category/katas/" class="item">网站运营</a>
+                                <a target="_blank" href="/category/downloads/" class="item">雕虫小技</a>
+                                <a target="_blank" href="/category/other-thinkings/" class="item">精选资源</a>
+                            </div>
+                        </div>
+                        <div class="four wide column">
+                            <h4 class="ui inverted header">Powered by</h4>
+                            <div class="ui images">
+                                <a target="_blank" href="http://www.python.org"><img src="../static/images/python-favico.ico" alt="python"></a>
+                                <a target="_blank" href="http://flask.pocoo.org/"><img src="../static/images/django.png" alt="flask"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!--注意，jquery必须在semantic前引用-->
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/semantic/dist/semantic.min.js"></script>
+    <script src="../static/node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+
+    <script>
+
+        //菜单栏的dropdown效果
+        $('.ui.dropdown')
+            .dropdown({
+                on: 'hover'
+            })
+        ;
+    </script>
+
+</body>
+</html>
